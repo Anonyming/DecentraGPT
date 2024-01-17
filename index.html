@@ -5,17 +5,25 @@
     <title>DecentraGPT: world's first decentralized LLM AI service</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body bgcolor="black">
+<body bgcolor="darkgray">
     <header id="header">
         <ul>
             <li><img src="Resources/full_logo.png" alt="logo" lowsrc="Resources/icon.png" height="10%" width="15%" align="left"></li>
             <li><h1 class="text">DECENTRAGPT</h1></li>
         </ul>
     </header>
-    <div id="dialog">
-        <link href="https://developers.sber.ru/gigachat">
+    <div id="dialog" class="element">
+        <div class="chat-ai"></div>
+        <script type="text/javascript" src="ChatAI.js"></script>
+        <script type="text/javascript">
+            new ChatAI({
+            container: '.chat-ai',
+            api_key: 'API_KEY',
+            model: 'gpt-3.5-turbo'
+        });
+        </script>
     </div>
-    <footer>
+    <footer class="element">
         <address class="text">контакты типа</address>
     </footer>
 </body>
