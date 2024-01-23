@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <title>DecentraGPT: world's first decentralized LLM AI service</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/jsx" src="main.jsx"></script>
 </head>
 <body bgcolor="darkgray">
     <header id="header">
         <ul>
-            <li><img src="Resources/full_logo.png" alt="logo" lowsrc="Resources/icon.png" height="10%" width="15%" align="left"></li>
-            <li><h1 class="text">DECENTRAGPT</h1></li>
+            <li><img src="Resources/full_logo.png" alt="logo"></li>
+            <li><h1 id="title">DECENTRAGPT</h1></li>
         </ul>
     </header>
-    <div id="dialog" class="element">
-
-    </div>
+    <ul class="element">
+        <li><div contenteditable="true" class="message message_out">Кто ты?</div></li>
+        <li><div contenteditable="true" class="message message_in">Я - первый в мире генеративный ИИ, расположенный в децентрализованной сети с блокчейн-криптографией и оптимизацией доставки Bit-Torrent!</div></li>
+        <li><div contenteditable="true" class="message message_send send">Напишите сообщение...</div><button class="message_send_button send">Отправить</button></li>
+    </ul>
     <footer class="element">
         <address class="text">контакты</address>
     </footer>
