@@ -72,7 +72,7 @@ img {
     horiz-align: left;
 }
 
-.message_send_button {
+#message_send_button {
     horiz-align: right;
     width: 15%;
     margin: 1%;
