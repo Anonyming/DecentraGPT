@@ -19,8 +19,9 @@ header {
 
 #title {
     horiz-align: right;
-    margin-left: 50%;
+    margin-left: 40%;
     margin-bottom: 5%;
+    margin-right: 10%;
 }
 
 ul {
@@ -84,6 +85,7 @@ img {
     background: darkgray;
     border: green 7px;
     font-palette: inherit;
+    padding: 1%;
 }
 
 footer {

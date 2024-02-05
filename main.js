@@ -1,5 +1,5 @@
 // Import LLM app
-import {LLM} from "llm.js/llm.js";
+LLM = require('llm.js') ;
 
 // State variable to track model load status
 var model_loaded = false;
@@ -62,14 +62,13 @@ function timer() {
 var mes
 
 async function Send_message() {
-    const write_input = (mes) => {
-        var out = document.createElement('li');
-        var outcontent = document.createElement('div');
-        out.appendChild(outcontent);
-        outcontent.setAttribute('class', 'message message_out');
-        outcontent.textContent = mes.valueOf()
-        document.getElementById('dialog').appendChild(out);
-    }
+    alert("Send")
+    var out = document.createElement('li');
+    var outcontent = document.createElement('div');
+    out.appendChild(outcontent);
+    outcontent.setAttribute('class', 'message message_out');
+    outcontent.textContent = mes.valueOf()
+    document.getElementById('dialog').appendChild(out);
     await LLM(mes.valueOf())
 }
 
