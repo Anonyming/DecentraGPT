@@ -1,5 +1,8 @@
 // Import LLM app
-LLM = require('llm.js') ;
+import {LLM} from "./llm.js"
+
+// State the input variable
+let mes= document.getElementById('send_input');
 
 // State variable to track model load status
 var model_loaded = false;
@@ -13,10 +16,10 @@ const on_loaded = () => {
 }
 const write_result = (text) => {
     var res = document.createElement('li');
-    var rescontent = document.createElement('div');
-    res.appendChild(rescontent);
-    rescontent.setAttribute('class', 'message message_in');
-    rescontent.textContent = text;
+    var res_content = document.createElement('div');
+    res.appendChild(res_content);
+    res_content.setAttribute('class', 'message message_in');
+    res_content.textContent = text;
     document.getElementById('dialog').appendChild(res);
 }
 const run_complete = () => {}
@@ -59,19 +62,13 @@ function timer() {
 
 //SENDING MESSAGE
 
-var mes
-
 async function Send_message() {
     alert("Send")
     var out = document.createElement('li');
-    var outcontent = document.createElement('div');
-    out.appendChild(outcontent);
-    outcontent.setAttribute('class', 'message message_out');
-    outcontent.textContent = mes.valueOf()
+    var out_content = document.createElement('div');
+    out.appendChild(out_content);
+    out_content.setAttribute('class', 'message message_out');
+    out_content.textContent = mes.value()
     document.getElementById('dialog').appendChild(out);
-    await LLM(mes.valueOf())
+    await LLM(mes.value())
 }
-
-mes = document.getElementById('send')
-const sendButton = document.getElementById(message_send_button)
-sendButton.addEventListener("click", Send_message)
