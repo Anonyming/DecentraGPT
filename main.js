@@ -1,5 +1,5 @@
-// Import LLM app
-import {LLM} from "./llm.js"
+// Import llm.js app
+import {LLM} from "llm.js/llm.js";
 
 // State the input variable
 let mes= document.getElementById('send_input');
@@ -24,7 +24,7 @@ const write_result = (text) => {
 }
 const run_complete = () => {}
 
-// Configure LLM app"
+// Configure llm.js app"
 const app = new LLM(
     // Type of Model
     'STARCODER',
@@ -70,5 +70,5 @@ async function Send_message() {
     out_content.setAttribute('class', 'message message_out');
     out_content.textContent = mes.value()
     document.getElementById('dialog').appendChild(out);
-    await LLM(mes.value())
+    await app(mes.value())
 }
